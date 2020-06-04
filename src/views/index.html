@@ -19,14 +19,15 @@
 
     <div id="page-home">
         <div class="content">  
-            <header>
+            {% include "partials/page-header.html" %}
+           <!-- <header>
                 <img src="/assets/logo.svg" alt="Logomarca">
                 <a href="/create-point">
                     <span></span>
                     Cadastre um ponto de coleta
                 </a>
             </header>
-            
+               -->
             <main>
                 <h1>Seu marketplace de coleta de residuos</h1>
             
@@ -39,23 +40,8 @@
     </div> 
     
     <!-- Modal de Login-->
-    <div id="modal" class="hide">
-        <div class="content">
-            <div class="header">
-                <h1>Pontos de Coleta</h1>
-                <a href="#">Fechar</a>
-            </div>
-            <form action="/search-results">
-                <label for="search">cidade ou Estado</label>
-                <div class="search field">
-                    <input type="text" name="search" placeholder="Pesquise por Cidade">
-                    <button>
-                        <img src="/assets/search.svg" alt="Buscar">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+    {% include "partials/modal.html" %}
+
     <script src="/scripts/index.js"></script>
 </body>
-</html> 
+</html>  
