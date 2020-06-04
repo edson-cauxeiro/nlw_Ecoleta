@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts Link-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/search-results.css">
-    
-    <link rel="stylesheet" href="./styles/responsive.css">
-    
+{% extends "layout.html" %}
+{# Variavel para Id da Pagina #}
+{% set pageId = "page-search-results" %}
+
+{# Titulo da Pagina #}
+{% block title %}
     <title>Resultado da Pesquisa</title>
-</head>
-<body>
-    <div id="page-search-results">
-          
-            {% include "partials/page-header.html" %}
-            <!-- 
-            <header>
-                <img src="/assets/logo.svg" alt="Logomarca">
-                <a href="/">
-                    <span></span>
-                    Voltar para home
-                </a>
-            </header> 
-                -->
+{% endblock title %}
+
+{# Styles da Pagina Create-Point #}
+{% block styles %}
+    <link rel="stylesheet" href="./styles/search-results.css">
+{% endblock styles %}
+
+{# Conteudo da Pagina Create-Point #}
+{% block content %}
+   {% include "partials/page-header.html" %}
+
             <main>
                 <h4>
                     <strong>2 pontos</strong> encontrados
                 </h4>
                 <div class="cards">
-                    <!-- Card 1-->
+                    {# Card 1 #}
                     <div class="card">
                         <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80" alt="Colectoria">
                         <h1>Colectoria</h1>
@@ -42,7 +32,7 @@
                             Nº 260
                         </p>
                     </div>
-                    <!-- Card 2-->
+                    {# Card 1 #}
                     <div class="card">
                         <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Papersider">
                         <h1>Papersider</h1>
@@ -55,7 +45,8 @@
                     </div>
                 </div>
             </main>
-           
-    </div>  
-</body>
-</html>
+{% endblock content %}
+
+{# Bloco de Scripts #}
+{% block scripts %} 
+{% endblock scripts %}
