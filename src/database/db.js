@@ -6,7 +6,7 @@ const db = new sqlite3.Database("./src/database/database.db")
 
 module.exports = db
 //utilizar o objecto de banco de dados, para nossos operações
-/* db.serialize(() => {
+/*db.serialize(() => {
     // Como Comandos SQL eu vou:
     // 1 criar uma Tabela
     db.run(`
@@ -50,7 +50,7 @@ module.exports = db
         }
         console.log("Cadastro com sucesso")
         console.log(this)
-    }
+    } 
    // db.run(query, values, afterInsertData)
 
     // 3 consultar os dados da tabela
@@ -60,14 +60,14 @@ module.exports = db
         }
         console.log("Aqui estão seus Registros: ")
         console.log(rows)
-    })
+    }) 
 
     // 4 Deletar um dado da tabela 
-    db.run(`DELETE FROM places WHERE id = ?`, [4], function(err) {
+    db.run(`DELETE FROM places WHERE id = ?`, [5], function(err) {
         if(err) {
             return console.log(err)
         }
         console.log("Registro deletado com Sucesso!")
     })    
 }) */
-
+ 
